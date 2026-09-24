@@ -1,0 +1,12 @@
+{
+    "name": "querymind-dev",
+    "private": true,
+    "scripts": {
+        "backend": "uvicorn backend.main:app --reload --port 8000",
+        "frontend": "cd frontend && npm run dev",
+        "dev": "concurrently -n BACKEND,FRONTEND -c blue,green \"npm:backend\" \"npm:frontend\""
+    },
+    "devDependencies": {
+        "concurrently": "^9.1.0"
+    }
+}
